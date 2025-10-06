@@ -96,8 +96,8 @@ export default function ChatBox() {
               <div
                 className={`max-w-[80%] rounded-2xl px-4 py-3 backdrop-blur-md ${
                   message.role === "user"
-                    ? "bg-purple-600/90 text-white shadow-lg shadow-purple-500/20"
-                    : "border border-gray-700/50 bg-gray-800/70 text-gray-100 shadow-lg"
+                    ? "bg-gray-800 text-white shadow-lg shadow-white/5"
+                    : "border border-gray-700/50 bg-gray-800/70 text-gray-100 shadow-sm"
                 }`}
               >
                 <p className="text-sm leading-relaxed break-words whitespace-pre-wrap">
@@ -115,7 +115,7 @@ export default function ChatBox() {
 
           {isTyping && (
             <div className="mb-8 flex gap-4">
-              <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-purple-600/80 backdrop-blur-sm">
+              <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-white/80 backdrop-blur-sm">
                 <Bot size={18} className="text-white" />
               </div>
               <div className="max-w-[80%] rounded-2xl border border-gray-700/50 bg-gray-800/70 px-4 py-3 shadow-lg backdrop-blur-md">
@@ -159,7 +159,7 @@ export default function ChatBox() {
               type="button"
               onClick={handleSubmit}
               disabled={!input.trim()}
-              className="absolute right-2 bottom-2 rounded-lg bg-purple-600/90 p-2 text-white backdrop-blur-sm transition-all hover:bg-purple-700 hover:shadow-lg hover:shadow-purple-500/30 disabled:cursor-not-allowed disabled:bg-gray-700/60"
+              className="absolute right-2 bottom-2 rounded-lg bg-purple-600/90 p-2 text-white backdrop-blur-sm transition-all hover:bg-purple-700 hover:shadow-lg hover:shadow-white/30 disabled:cursor-not-allowed disabled:bg-gray-700/60"
             >
               <Send size={18} />
             </button>
