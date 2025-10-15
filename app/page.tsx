@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { FaMagic, FaComments, FaShieldAlt, FaEye } from "react-icons/fa";
 import { LightRays } from "@/components/ui/light-rays";
 import Link from "next/link";
+// import { InteractiveGridPattern } from "@/components/ui/interactive-grid-pattern";
+// import { cn } from "@/lib/utils";
 
 export default function Home() {
   return (
@@ -15,6 +17,17 @@ export default function Home() {
 
       {/* --- Hero Section --- */}
       <section className="flex flex-col items-center px-6 py-32 text-center">
+        {/* <div className="justify-right fixed top-0 right-0 flex h-[500px] w-full flex-col items-center overflow-hidden rounded-lg">
+          <InteractiveGridPattern
+            className={cn(
+              "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]",
+            )}
+            width={20}
+            height={20}
+            squares={[80, 80]}
+            squaresClassName="hover:fill-purple-500"
+          />
+        </div> */}
         <LightRays />
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
