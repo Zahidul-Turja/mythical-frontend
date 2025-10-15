@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import { Menu, PanelLeftClose } from "lucide-react";
-import Sidebar from "@/components/game/Sidebar";
-import ChatBox from "@/components/game/ChatBox";
+import Sidebar from "@/components/quest/Sidebar";
+import ChatBox from "@/components/quest/ChatBox";
 
 export default function Layout() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);

@@ -15,9 +15,7 @@ export default function Home() {
 
       {/* --- Hero Section --- */}
       <section className="flex flex-col items-center px-6 py-32 text-center">
-        {/* <div className="relative h-[400px] w-full overflow-hidden rounded-xl border"> */}
         <LightRays />
-        {/* </div> */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -42,7 +40,7 @@ export default function Home() {
           transition={{ delay: 0.6 }}
         >
           <Link
-            href="#about"
+            href="/quest"
             className="mt-10 inline-block rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-8 py-4 text-lg font-semibold transition-transform hover:scale-105 hover:shadow-[0_0_20px_rgba(200,150,255,0.6)]"
           >
             Start Your Quest
@@ -74,8 +72,8 @@ export default function Home() {
         </p>
 
         {/* Example dialogue snippet */}
-        <div className="mt-10 rounded-xl border border-purple-700/30 bg-[#141421]/60 p-6 text-left shadow-lg backdrop-blur-md">
-          <p className="mb-2 font-semibold text-purple-300">
+        <div className="mt-10 rounded-xl border border-purple-700/30 bg-[#141421]/60 px-6 py-16 text-left shadow-lg backdrop-blur-md">
+          {/* <p className="mb-2 font-semibold text-purple-300">
             🧙‍♂️ AI Dungeon Master:
           </p>
           <p className="mb-4 text-gray-300 italic">
@@ -85,7 +83,44 @@ export default function Home() {
           <p className="mb-2 font-semibold text-pink-300">🧝‍♀️ You:</p>
           <p className="text-gray-200 italic">
             “I whisper an ancient spell to unlock the gate.”
-          </p>
+          </p> */}
+          <div className="mx-auto max-w-2xl space-y-6">
+            <div className="flex justify-start">
+              <div className="max-w-md rounded-2xl rounded-tl-none border border-purple-500/30 bg-purple-900/40 px-6 py-4 backdrop-blur-sm">
+                <p className="mb-1 text-sm font-semibold text-purple-100/90">
+                  Dungeon Master
+                </p>
+                <p className="text-purple-200">
+                  The ancient door creaks open, revealing a chamber filled with
+                  ethereal blue light. What do you do?
+                </p>
+              </div>
+            </div>
+
+            <div className="flex justify-end">
+              <div className="max-w-md rounded-2xl rounded-tr-none border border-pink-500/30 bg-pink-900/40 px-6 py-4 backdrop-blur-sm">
+                <p className="mb-1 text-sm font-semibold text-pink-100/90">
+                  You
+                </p>
+                <p className="text-pink-200">
+                  I cautiously step inside and examine the source of the light.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex justify-start">
+              <div className="max-w-md rounded-2xl rounded-tl-none border border-purple-500/30 bg-purple-900/40 px-6 py-4 backdrop-blur-sm">
+                <p className="mb-1 text-sm font-semibold text-purple-100/90">
+                  Dungeon Master
+                </p>
+                <p className="text-purple-200">
+                  At the chamber&apos;s center floats a crystalline orb, pulsing
+                  with mysterious energy. As you approach, whispers echo in a
+                  forgotten tongue...
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -126,7 +161,7 @@ export default function Home() {
       <footer className="w-full border-t border-purple-700/30 py-10 text-center text-gray-400">
         <div className="mb-4 flex justify-center gap-6">
           <a
-            href="https://github.com/"
+            href="https://github.com/Zahidul-Turja/"
             target="_blank"
             rel="noopener noreferrer"
             className="transition-colors hover:text-purple-300"
