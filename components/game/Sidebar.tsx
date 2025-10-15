@@ -5,12 +5,18 @@ import React, { useState } from "react";
 import { chatHistories } from "@/public/dummy_data";
 import { Plus, MessageSquare, Trash2 } from "lucide-react";
 
+interface ChatHistory {
+  id: number;
+  title: string;
+  date: string;
+}
+
 export default function Sidebar({ isSidebarOpen }: { isSidebarOpen: boolean }) {
-  const [chats, setChats] = useState<typeof chatHistories>(chatHistories);
+  const [chats, setChats] = useState<ChatHistory[]>(chatHistories);
   const [selectedChat, setSelectedChat] = useState<number | null>(null);
 
   const groupChatsByDate = () => {
-    const groups: { [key: string]: typeof chats } = {};
+    const groups: { [key: string]: ChatHistory[] } = {};
     chats.forEach((chat) => {
       if (!groups[chat.date]) {
         groups[chat.date] = [];
